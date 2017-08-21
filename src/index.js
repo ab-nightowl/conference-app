@@ -4,6 +4,9 @@ import TalkService from "./common/talk.service";
 import SpeakerList from './speakers/list';
 import SessionList from './sessions/list';
 
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap'
+
 let layout = new Layout();
 let ts = new TalkService();
 let speakerList = new SpeakerList(ts);
