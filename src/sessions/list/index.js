@@ -8,7 +8,7 @@ export default class SessionList {
 	render(idView) {
 		const prom = this.talkService.findAllSessions();
 		prom.then(sessions => {
-			document.getElementById(idView).innerHTML = '<ul class="list-group">' + sessions.map(s => 
+			document.getElementById(idView).innerHTML = '<hr><ul class="list-group">' + sessions.map(s => 
 				{ 
 					return '<li class="list-group-item">'
 					+`<a onclick="this.talkService.findSession(${s.id})" href="#sessions-list?id=${s.id}" style="text-decoration: underline;">`

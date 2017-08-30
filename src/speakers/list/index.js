@@ -8,7 +8,7 @@ export default class SpeakerList {
 	render(idView) {
 		const prom = this.talkService.findAllSpeakers();
 		prom.then(speakers => {
-			document.getElementById(idView).innerHTML = '<ul>' + speakers.map(s => { return '<li>' + s.firstname + '</li>'}).join('') + '</ul>';
+			document.getElementById(idView).innerHTML = '<hr><ul class="list-group">' + speakers.map(s => { return '<li class="list-group-item">' + s.firstname + '</li>'}).join('') + '</ul>';
 			}, error => {
 				console.log(error);
 			}

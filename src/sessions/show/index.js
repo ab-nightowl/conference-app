@@ -8,7 +8,7 @@ export default class SessionShow {
 	render(idView, idParam) {
 		const prom = this.talkService.findSession(idParam);
 		prom.then(session => {
-			document.getElementById(idView).innerHTML = ''
+			document.getElementById(idView).innerHTML = `<h1>${session.title}</h1><p>${session.desc}</p><br>`;
 		}, error => {
 				console.log(error);
 			}
